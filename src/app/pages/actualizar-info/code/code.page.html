@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Código</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <pre>
+  curl --location --request PUT '{{environment.baseUrl}}{{environment.user}}' \
+  --header 'Authorization: {{this.dataService.getToken()}} \
+  --header 'Content-Type: text/plain' \
+  --header 'Cookie: ARRAffinity=2ab40ad1ca13c406dfba35ca73484ddb1de25942a2ebf38c1f06a64fa1eca323' \
+  --data-raw {{'{
+  "name":"test2",
+  "last_name": "last test",
+  "t_dni":"V",
+  "dni":"1123456789",
+  "email":"test3@yopmail.com",
+  "telefono": "0192927172",
+  "direccion": "calle del medio 1"
+  }'}}
+  </pre>
+
+</ion-content>

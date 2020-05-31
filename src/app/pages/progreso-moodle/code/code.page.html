@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Código</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <pre>
+    curl --location --request GET 'https://averiguando.com?q=value' \
+    --header 'Authorization: {{this.dataService.getToken()}} \
+  </pre>
+
+</ion-content>

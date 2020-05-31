@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Docs</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h2>Progreso Moodle</h2>
+  <p>Devuelve informacion del usuario logueado, sobre su progreso en moodle</p>
+  <p><strong>url:</strong> {{environment.baseUrl}}{{environment.moodle}}</p>
+  <p><strong>method:</strong> GET</p>
+
+  <ion-list>
+    <ion-item-divider>
+      <ion-label color="primary">
+        Parametros
+      </ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label>
+        Ninguno
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item-divider>
+      <ion-label color="primary">
+        Respuesta
+      </ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label>
+        telefono
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item-divider>
+      <ion-label color="danger">
+        Error
+      </ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label>
+        status 403
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

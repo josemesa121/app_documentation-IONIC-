@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Código</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <pre>
+    curl --location --request POST '{{environment.baseUrl}}{{environment.user}}' \
+    --header 'Content-Type: text/plain' \
+    --header 'Cookie: ARRAffinity=29ab8dce658a8d6c63513449a0b2c9b998eaecce7d8e9839e9006cef4e391c77' \
+    --data-raw {{'{
+    "email":"test3@yopmail.com",
+    "code_validate":"zhr04F"
+    }'}}
+  </pre>
+
+</ion-content>
+
+
+

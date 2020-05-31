@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Prueba</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h1 class="ion-text-center ion-padding-bottom">Smart Tutor Client</h1>
+
+  <ion-button (click)="this.msalService.signIn()" class="ion-margin-top" expand="block">Iniciar Sesión</ion-button>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="docs">
+          <ion-icon name="book"></ion-icon>
+          <ion-label>Docs</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="test">
+          <ion-icon name="play"></ion-icon>
+          <ion-label>Prueba</ion-label>
+        </ion-tab-button>
+
+        <!-- <ion-tab-button tab="code">
+          <ion-icon name="code"></ion-icon>
+          <ion-label>Código</ion-label>
+        </ion-tab-button> -->
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

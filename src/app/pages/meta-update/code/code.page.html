@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Código</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <pre>
+  curl --location --request PUT '{{environment.baseUrl}}{{environment.meta}}' \
+  --header 'Authorization: {{this.dataService.getToken()}} \
+  --header 'Content-Type: text/plain' \
+  --header 'Cookie: ARRAffinity=6ba2a597ab4146face04b4a7e5ece170064df84a921bc763ac6bf0ae777f3349' \
+  --data-raw {{'{
+  "id": "c515f6b1-17af-4b1a-bd11-89e8691c5b98",
+  "meta":"Entrenamiento",
+  "nombre_meta":"nueva meta 2",
+  "fecha_desde":"2020/04/26",
+  "fecha_hasta":"2020/04/27",
+  "hora_desde":"10:40 pm",
+  "duracion_hasta":"80"
+  }'}}
+  </pre>
+
+</ion-content>

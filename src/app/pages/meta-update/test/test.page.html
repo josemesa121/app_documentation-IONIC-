@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Prueba</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <form #form="ngForm" novalidate="">
+
+    <ion-item>
+      <ion-label position="floating">Id</ion-label>
+      <ion-input type="text" [(ngModel)]="test.id" name="id" #id="ngModel" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Meta</ion-label>
+      <ion-input type="text" [(ngModel)]="test.meta" name="meta" #meta="ngModel" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nombre Meta</ion-label>
+      <ion-input type="text" [(ngModel)]="test.nombre_meta" name="nombre_meta" #nombre_meta="ngModel" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Fecha desde</ion-label>
+      <ion-input type="date" [(ngModel)]="test.fecha_desde" name="fecha_desde" #fecha_desde="ngModel" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Fecha hasta</ion-label>
+      <ion-input type="date" [(ngModel)]="test.fecha_hasta" name="fecha_hasta" #fecha_hasta="ngModel" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Hora desde</ion-label>
+      <ion-input type="time" [(ngModel)]="test.hora_desde" name="hora_desde" #hora_desde="ngModel" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Duración hasta</ion-label>
+      <ion-input type="text" [(ngModel)]="test.duracion_hasta" name="duracion_hasta" #duracion_hasta="ngModel" required></ion-input>
+    </ion-item>
+
+    <ion-button [disabled]="form.invalid" (click)="runTest()" class="ion-margin-top" expand="block">Enviar</ion-button>
+  </form>
+
+  <pre [hidden]="!response.status">
+  <ion-label color="primary">Status</ion-label>
+  {{response.status | json}}
+
+  <ion-label color="primary">Body</ion-label>
+  {{response.data | json}}
+
+  <ion-label color="primary">Headers</ion-label>
+  {{response.headers | json}}
+  </pre>
+
+  <pre [hidden]="!error">
+  <ion-label color="danger">Error</ion-label>
+  {{error | json}}
+  </pre>
+
+</ion-content>

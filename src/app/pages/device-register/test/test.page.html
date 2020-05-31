@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Prueba</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <form #form="ngForm" novalidate="">
+
+    <ion-item>
+      <ion-label position="floating">Id dispositivo</ion-label>
+      <ion-input type="text" [(ngModel)]="test.deviceId" name="deviceId" #deviceId="ngModel" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Empresa</ion-label>
+      <ion-input type="text" [(ngModel)]="test.empresa" name="empresa" #empresa="ngModel" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="test.nombre" name="nombre" #nombre="ngModel" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input type="text" [(ngModel)]="test.apellido" name="apellido" #apellido="ngModel" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" [(ngModel)]="test.email" name="email" #email="ngModel" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Teléfono</ion-label>
+      <ion-input type="text" [(ngModel)]="test.telefono" name="telefono" #telefono="ngModel" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Notificaciones</ion-label>
+      <ion-toggle [(ngModel)]="test.notificaciones" disabled="true" name="notificaciones"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Imei</ion-label>
+      <ion-input type="text" [(ngModel)]="test.imei" name="imei" #imei="ngModel" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Versión android</ion-label>
+      <ion-input type="text" [(ngModel)]="test.android_version" name="android_version" #android_version="ngModel" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Dirección mac</ion-label>
+      <ion-input type="text" [(ngModel)]="test.mac_address" name="mac_address" #mac_address="ngModel" required></ion-input>
+    </ion-item>
+
+    <ion-button [disabled]="form.invalid" (click)="runTest()" class="ion-margin-top" expand="block">Enviar</ion-button>
+  </form>
+
+  <pre [hidden]="!response.status">
+  <ion-label color="primary">Status</ion-label>
+  {{response.status | json}}
+
+  <ion-label color="primary">Body</ion-label>
+  {{response.data | json}}
+
+  <ion-label color="primary">Headers</ion-label>
+  {{response.headers | json}}
+  </pre>
+
+  <pre [hidden]="!error">
+  <ion-label color="danger">Error</ion-label>
+  {{error | json}}
+  </pre>
+
+</ion-content>

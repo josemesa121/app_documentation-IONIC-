@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Código</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <pre>
+  curl --location --request GET 'http://localhost/proyectos/api/public/api/login' \
+  --header 'Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3Byb3llY3Rvc1wvYXBpXC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE1ODE3MDk3MDMsImV4cCI6MTU4MTcwOTg4MywibmJmIjoxNTgxNzA5NzAzLCJqdGkiOiJSRVUwYlM0d2tYSk9yV2JlIiwic3ViIjo0LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.3ajTYw3SsgmTugoKIOba79HIhCoTLWjKjkCBc1JElFk' \
+  --form 'email=carlos@gmail.com' \
+  --form 'password=123456'
+  </pre>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="docs">
+          <ion-icon name="book"></ion-icon>
+          <ion-label>Docs</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="test">
+          <ion-icon name="play"></ion-icon>
+          <ion-label>Prueba</ion-label>
+        </ion-tab-button>
+
+        <!-- <ion-tab-button tab="code">
+          <ion-icon name="code"></ion-icon>
+          <ion-label>Código</ion-label>
+        </ion-tab-button> -->
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

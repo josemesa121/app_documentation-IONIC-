@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Código</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <pre>
+    curl --location --request POST '{{environment.baseUrl}}{{environment.logIn}}' \
+    --header 'Content-Type: text/plain' \
+    --data-raw {{'{"email":"jose@yopmail.com","password":"123456"}'}}
+  </pre>
+
+</ion-content>

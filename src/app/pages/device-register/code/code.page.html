@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Código</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <pre>
+  curl --location --request POST '{{environment.baseUrl}}{{environment.device}}' \
+  --header 'Content-Type: text/plain' \
+  --header 'Cookie: ARRAffinity=18a4afe4ad5618de88b6d52d0c629901a8f44c9ff14664e3f0ef84260f8d3a25' \
+  --data-raw {{'{"deviceId":"aaaaa",
+  "empresa": "aaa1", 
+  "nombre": "aaa1", 
+  "apellido": "aaa1", 
+  "email": "aaa1", 
+  "telefono": "aaa1", 
+  "notificaciones": true,
+  "imei": "sdasdas",
+  "android_version": "sdasfsdfs",
+  "mac_address": "sdasfsdf"
+  }'}}
+  </pre>
+
+</ion-content>

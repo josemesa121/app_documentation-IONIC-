@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Código</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <pre>
+  curl --location --request DELETE '{{environment.baseUrl}}{{environment.meta}}' \
+  --header 'Authorization: {{this.dataService.getToken()}} \
+  --header 'Content-Type: text/plain' \
+  --data-raw {{'{
+  "id": "c515f6b1-17af-4b1a-bd11-89e8691c5b98"
+  }'}}
+  </pre>
+
+</ion-content>

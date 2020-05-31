@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Prueba</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-button (click)="runTest()" class="ion-margin-top" expand="block">Enviar</ion-button>
+
+  <pre [hidden]="!response.status">
+    <ion-label color="primary">Status</ion-label>
+    {{response.status | json}}
+  
+    <ion-label color="primary">Body</ion-label>
+    {{response.data | json}}
+  
+    <ion-label color="primary">Headers</ion-label>
+    {{response.headers | json}}
+  </pre>
+
+  <pre [hidden]="!error">
+  <ion-label color="danger">Error</ion-label>
+  {{error | json}}
+  </pre>
+
+</ion-content>

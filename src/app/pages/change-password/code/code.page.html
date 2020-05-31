@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Código</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <pre>
+    curl --location --request POST '{{environment.baseUrl}}{{environment.changePassword}}' \
+    --header 'Content-Type: text/plain' \
+    --header 'Cookie: ARRAffinity=9dd6624f30a2c94a7b388a634d4e3a7b5a66a09db93ce04d26787183638a4feb' \
+    --data-raw {{'{
+      "key" : "98d40b7c2a5937e904e2a7a2f87ec7d3563d0efeb86bab2d5e27ad1de9f9557be1f406f67c4c006fb2016f7e740f8839939460d337a943405c70f4378276570372c52a16efa9b74b521d892b34cebbaa05201231b820d3b6febb930ff96f3f301b91692114bef614510da347a4be007cc6ea3339addbd281044565b798edeb06331a7158e4d3138436dc7267f2b9b96e29135bb118dec9dcbae700c51314fe3d29e3e980ca12a021d7fff492b7bd0fcfe4b7890a1ec9766a3880ad79eb0af61f3f4e29cca86fdc86a7d23ba0d2af22f294",
+      "password" : "0123456789",
+      "confirm_password" : "0123456789"
+    }'}}
+  </pre>
+
+</ion-content>
